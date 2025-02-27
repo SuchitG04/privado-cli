@@ -114,7 +114,7 @@ func init() {
 		SlowdownTime:                     600 * time.Millisecond,
 		Container: &ContainerConfiguration{
 			// ImageURL:                    fmt.Sprintf("public.ecr.aws/privado/privado:%s", imageTag),
-			ImageURL:                    fmt.Sprintf("privado-patched:latest", imageTag),
+			ImageURL:                    fmt.Sprintf("privado-patched:latest"),
 			DockerAccessKeyEnv:          "PRIVADO_DOCKER_ACCESS_KEY",
 			UserKeyVolumeDir:            "/app/keys/user.key",
 			DockerKeyVolumeDir:          "/app/keys/docker.key",
