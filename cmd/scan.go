@@ -154,7 +154,7 @@ func scan(cmd *cobra.Command, args []string) {
 
 	fmt.Println("> Scanning directory:", fileutils.GetAbsolutePath(repository))
 
-	if dockerAccessKey, err := docker.GetPrivadoDockerAccessKey(true); err != nil || dockerAccessKey == "" {
+	if dockerAccessKey, err := docker.GetPrivadoDockerAccessKey(false); err != nil || dockerAccessKey == "" {
 		exit(fmt.Sprintf("Cannot fetch docker access key: %v \nPlease try again or raise an issue at %s", err, config.AppConfig.PrivadoRepository), true)
 	} else {
 		config.LoadUserDockerHash(dockerAccessKey)

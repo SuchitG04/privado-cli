@@ -113,7 +113,8 @@ func init() {
 		PrivadoTelemetryEndpoint:         fmt.Sprintf("https://%s/api/event?version=2", telemetryHost),
 		SlowdownTime:                     600 * time.Millisecond,
 		Container: &ContainerConfiguration{
-			ImageURL:                    fmt.Sprintf("public.ecr.aws/privado/privado:%s", imageTag),
+			// ImageURL:                    fmt.Sprintf("public.ecr.aws/privado/privado:%s", imageTag),
+			ImageURL:                    fmt.Sprintf("privado-patched:latest", imageTag),
 			DockerAccessKeyEnv:          "PRIVADO_DOCKER_ACCESS_KEY",
 			UserKeyVolumeDir:            "/app/keys/user.key",
 			DockerKeyVolumeDir:          "/app/keys/docker.key",
